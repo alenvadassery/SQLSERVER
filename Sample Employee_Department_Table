@@ -1,0 +1,44 @@
+CREATE TABLE tblDepartment(
+  DepartmentID int NOT NULL IDENTITY(1,1) PRIMARY KEY,
+  Name varchar(255) NOT NULL
+  )
+  
+insert into tblDepartment (Name) values ('Services');
+insert into tblDepartment (Name) values ('Support');
+insert into tblDepartment (Name) values ('Marketing');
+insert into tblDepartment (Name) values ('Training');
+insert into tblDepartment (Name) values ('Legal');
+insert into tblDepartment (Name) values ('Business Development');
+insert into tblDepartment (Name) values ('Training');
+insert into tblDepartment (Name) values ('Legal');
+insert into tblDepartment (Name) values ('Training');
+insert into tblDepartment (Name) values ('Product Management');
+
+
+CREATE TABLE tblEmployee(
+  EmployeeID int NOT NULL  IDENTITY(1,1) PRIMARY KEY,
+  EmployeeName varchar(255) NOT NULL,
+  Gender char,
+  ManagerID int,
+  DepartmentID int,
+  Salary decimal,
+  DOB datetime2,
+  CONSTRAINT FK_EmployeeDepartment FOREIGN KEY (DepartmentID)
+  REFERENCES tblDepartment(DepartmentID)
+  )
+insert into tblEmployee (EmployeeName, Gender, ManagerID, DepartmentID, Salary, DOB) values ('Michelle Bush', 'F', 10, 2, '16544.51', '12/1/2017');
+insert into tblEmployee (EmployeeName, Gender, ManagerID, DepartmentID, Salary, DOB) values ('Trevor Anniwell', 'M', 15, 9, '44220.07', '3/14/2018');
+insert into tblEmployee (EmployeeName, Gender, ManagerID, DepartmentID, Salary, DOB) values ('Veriee Gallihawk', 'F', 3, 2, '47340.93', '11/30/2017');
+insert into tblEmployee (EmployeeName, Gender, ManagerID, DepartmentID, Salary, DOB) values ('Conroy Ferschke', 'M', 5, 10, '39960.13', '12/3/2017');
+insert into tblEmployee (EmployeeName, Gender, ManagerID, DepartmentID, Salary, DOB) values ('Tye Figgen', 'M', 13, 3, '69588.68', '10/16/2017');
+insert into tblEmployee (EmployeeName, Gender, ManagerID, DepartmentID, Salary, DOB) values ('Maybelle Gatehouse', 'F', 13, 7, '71485.24', '11/15/2017');
+insert into tblEmployee (EmployeeName, Gender, ManagerID, DepartmentID, Salary, DOB) values ('Rosalind Nannini', 'F', 6, 9, '16594.05', '8/11/2017');
+insert into tblEmployee (EmployeeName, Gender, ManagerID, DepartmentID, Salary, DOB) values ('Andi Coldicott', 'F', 3, 5, '79942.54', '7/27/2017');
+insert into tblEmployee (EmployeeName, Gender, ManagerID, DepartmentID, Salary, DOB) values ('Mariya Emer', 'F', 2, 1, '22851.48', '7/13/2017');
+insert into tblEmployee (EmployeeName, Gender, ManagerID, DepartmentID, Salary, DOB) values ('Debera Warrack', 'F', 2, 10, '28011.58', '8/26/2017');
+insert into tblEmployee (EmployeeName, Gender, ManagerID, DepartmentID, Salary, DOB) values ('Lemmy Donnett', 'M', 12, 4, '71650.95', '11/13/2017');
+insert into tblEmployee (EmployeeName, Gender, ManagerID, DepartmentID, Salary, DOB) values ('Valera Larkworthy', 'F', 5, 8, '28184.81', '6/17/2017');
+insert into tblEmployee (EmployeeName, Gender, ManagerID, DepartmentID, Salary, DOB) values ('Will Skeldon', 'M', 9, 8, '96878.85', '10/7/2017');
+insert into tblEmployee (EmployeeName, Gender, ManagerID, DepartmentID, Salary, DOB) values ('Isis Halburton', 'F', 13, 2, '5187.90', '6/9/2017');
+insert into tblEmployee (EmployeeName, Gender, ManagerID, DepartmentID, Salary, DOB) values ('Clayson Eastmead', 'M', 14, 3, '51474.65', '7/27/2017');
+
